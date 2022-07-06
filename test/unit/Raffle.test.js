@@ -13,6 +13,7 @@ const { developmentChains, networkConfig } = require("../../helper-hardhat-confi
               raffle = await ethers.getContract("Raffle", deployer)
               vrfCoordinatorV2Mock = await ethers.getContract("VRFCoordinatorV2Mock", deployer)
               raffleEntranceFee = await raffle.getEntranceFee()
+              console.log(raffleEntranceFee.toString())
               interval = await raffle.getInterval()
               console.log("top beforeEach")
           })
